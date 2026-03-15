@@ -22,7 +22,7 @@
 
 typedef struct fractal_t {
     float(*dist_func)(vec3_t);                      // distance function of fractal
-    sg_shader_desc* (*shader_desc_cb)(sg_backend);  // get shader description callback
+    const sg_shader_desc* (*shader_desc_cb)(sg_backend);  // get shader description callback
     const char* name;                               // name of fractal
 } fractal_t;
 

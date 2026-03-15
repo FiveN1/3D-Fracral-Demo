@@ -42,15 +42,15 @@ static float de(vec3_t z) {
         if (z.y >= a * 0.5 + f * (2.0 * a - 1.95) / 4.0 * vecmath_sign(z.x + b * 0.5) *
             (1.0 - vecmath_exp(-(7.2 - (1.95 - a) * 15.0) * vecmath_abs(z.x + b * 0.5)))) {
             z = vec3_sub(vec3(-b, a, 0.0), z);
-        } //If above the separation line, rotate by 180° about (-b/2, a/2)
+        } //If above the separation line, rotate by 180ï¿½ about (-b/2, a/2)
         TransA(&z, &DF, a, b); //Apply transformation a
         if (vec3_dot(vec3_sub(z, llz), vec3_sub(z, llz)) < 1e-5) {
             break;
         } //If the iterated points enters a 2-cycle, bail out
         llz = lz; lz = z; //Store previous iterates
     }
-    float y = min(z.y, a - z.y);
-    DE = min(DE, min(y, 0.3) / max(DF, 2.0));
+    float y = vecmath_min(z.y, a - z.y);
+    DE = vecmath_min(DE, vecmath_min(y, 0.3) / vecmath_max(DF, 2.0));
     DE = DE * d2 / (rad + d * DE);
     return DE;
 }

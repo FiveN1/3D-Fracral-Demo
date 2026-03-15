@@ -3,7 +3,6 @@
 
 /*
     3D fractal demo by Tomáš Verheyen aka. FiveN.
-    This demo is written in C99.
     
     Resources:
         Signed distance field functions, provided by Jon Baker:
@@ -44,14 +43,13 @@ static struct app_data {
 
 void init() {
     sg_setup(&(sg_desc){ .environment = sglue_environment() });
-    stm_setup(); srand(stm_now()); // not great
     simgui_setup(&(simgui_desc_t) { 0 });
     ImGuiIO* ig_io = igGetIO_Nil();
     ig_io->ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 
     app_data.pass_action = (sg_pass_action){ .colors[0] = {.load_action = SG_LOADACTION_DONTCARE } };
     app_data.show_window = true;
-    app_data.fractal_type = rand() % (sizeof(fractals) / sizeof(fractal_t*));
+    app_data.fractal_type = 0;
     app_data.camera = (camera_t){
         .pos = (vec3_t){ 0.0f, 0.0f, 0.0f },
         .dir = (vec3_t){ 0.0f, 0.0f, -1.0f },

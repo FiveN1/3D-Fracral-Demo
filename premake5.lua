@@ -4,7 +4,7 @@ output_directory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 workspace "3d_fractal_demo"
 	startproject "3d_fractal_demo"
 
-	system "windows" -- emscripten
+	system "windows"
 
 	configurations {
         "Debug",
@@ -52,9 +52,6 @@ project "3d_fractal_demo"
 	files {
 		"src/**.h",
 		"src/**.c"
-
-		--c_libs_directory .. "/cimgui/**.c",
-		--c_libs_directory .. "/cimgui/**.cpp"
 	}
 	
 	includedirs {
