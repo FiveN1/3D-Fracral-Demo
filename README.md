@@ -1,6 +1,6 @@
 # 3D Fracral Demo
 
-The demo is playable in a browser [here!](https://fiven1.github.io/web/webgl_demos/sdf_fractal_demo/index.html)
+The demo is playable [here](https://fiven1.github.io/web/webgl_demos/sdf_fractal_demo/index.html) in a browser.
 
 ## About the project
 This project is very simple, and you can use it as reference material for developing your own SDF renderer.
