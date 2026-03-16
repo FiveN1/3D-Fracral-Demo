@@ -63,6 +63,7 @@ void draw_imgui() {
             if (igButton("reset position", (ImVec2_c) { 0 })) app_data.camera.pos = (vec3_t){ 0.0, 0.0, 0.0 };
             igCheckbox("variable speed", &app_data.camera.variable_speed);
             igSliderFloat("camera speed", &app_data.camera.speed, 0.2f, 64.0f, NULL, 0);
+            igSliderFloat("camera sensitivity", &app_data.camera.sensitivity, 0.01f, 1.0f, NULL, 0);
             igSliderFloat("focal length", &fractal_state.fs_params.focal_length, 0.2f, 8.0f, NULL, 0);
 
         }

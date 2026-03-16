@@ -55,6 +55,7 @@ void init() {
         .dir = (vec3_t){ 0.0f, 0.0f, -1.0f },
         .up = (vec3_t){ 0.0f, 1.0f, 0.0f },
         .speed = 4.0f,
+        .sensitivity = 0.1f,
         .variable_speed = true
     };
 
