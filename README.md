@@ -9,6 +9,7 @@
 </div>
 
 The demo is playable [here](https://fiven1.github.io/web/webgl_demos/sdf_fractal_demo/index.html) in the browser.
+(warning! dont run this on your phone or it will freeze!)
 
 ## About the project
 This project is very simple, and you can use it as reference material for developing your own SDF renderer.
