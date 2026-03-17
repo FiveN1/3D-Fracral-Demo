@@ -4,7 +4,7 @@ fractal_state_t fractal_state = {
 	.vs_params = {
 		.eye_position = { 0.0, 0.0, 0.0 },
 		.eye_direction = { 0.0, 0.0, -1.0 },
-		.aspect = 1.0 // temp
+		.aspect = 1.0 // temp value
 	},
 	.fs_params = {
 		.min_dist = 0.001f,
@@ -13,9 +13,9 @@ fractal_state_t fractal_state = {
 		.frac_iterations = 8,
 		.focal_length = 1.8f,
 
-		.ambient_color =	{ 0.0f, 0.0f, 0.0f },		// 0.6f, 0.7f, 0.4f // 0.5f, 0.5f, 0.7f
+		.ambient_color =	{ 0.0f, 0.0f, 0.0f },
 		.light_direction =	{ 1.0f, 1.0f, 1.0f },
-		.light_color =		{ 1.0f, 1.0f, 1.0f },		// 1.0f, 0.9f, 0.8f
+		.light_color =		{ 1.0f, 1.0f, 1.0f },
 		.spec_color =		{ 1.0f, 1.0f, 0.8f },
 		.ambient_strength = 0.4f,
 		.spec_strength =	0.4f,
@@ -34,8 +34,6 @@ void fractal_state_init() {
 
 void fractal_state_set_fractal(fractal_t* fractal) {
 	sg_destroy_pipeline(fractal_state.pipeline); // note that this doesnt do anything if the pipeline doesnt exist.
-	//fractal_state.pipeline = fractal->init_pip_cb();
-
 	fractal_state.pipeline = sg_make_pipeline(&(sg_pipeline_desc) {
 		.shader = sg_make_shader(fractal->shader_desc_cb(sg_query_backend())),
 		.layout = (sg_vertex_layout_state){ .attrs[0].format = SG_VERTEXFORMAT_FLOAT2 }

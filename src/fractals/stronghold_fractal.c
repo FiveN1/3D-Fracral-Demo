@@ -4,7 +4,7 @@ static float de(vec3_t p) {
     int iterations = fractal_state.fs_params.frac_iterations;
     float s = 2.0;
     float e = 0.0;
-    for (int j = 0; ++j < iterations;) {// iterations = 7
+    for (int j = 0; ++j < iterations;) {
         vec2_t xz = vec2_subf(vec2_abs(vec2(p.x, p.z)), 2.3f);
         p.x = xz.x;
         p.z = xz.y;

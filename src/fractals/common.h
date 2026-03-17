@@ -21,9 +21,9 @@
 // common data for fractal implementations.
 
 typedef struct fractal_t {
-    float(*dist_func)(vec3_t);                      // distance function of fractal
-    const sg_shader_desc* (*shader_desc_cb)(sg_backend);  // get shader description callback
-    const char* name;                               // name of fractal
+    float(*dist_func)(vec3_t);                              // distance function of fractal
+    const sg_shader_desc* (*shader_desc_cb)(sg_backend);    // get shader description callback
+    const char* name;                                       // name of fractal
 } fractal_t;
 
 typedef struct fractal_state_t {
