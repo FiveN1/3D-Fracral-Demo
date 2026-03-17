@@ -1,7 +1,7 @@
 # 3D Fracral Demo
 <div float="left">
   <img src="https://github.com/FiveN1/3D-Fracral-Demo/blob/main/res/screenshot1.png" alt="screenshot" width="256"/>
-  <img src="https://github.com/FiveN1/3D-Fracral-Demo/blob/main/res/screenshot2.png" alt="screenshot" width="256"/>
+  <img src="https://github.com/FiveN1/3D-Fracral-Demo/blob/main/res/3D_fractal_demo_flythrough_clip_24fps.gif" alt="screenshot" width="256"/>
 </div>
 <div float="left">
   <img src="https://github.com/FiveN1/3D-Fracral-Demo/blob/main/res/3D_fractal_demo_iteration_settings_24fps.gif" alt="screenshot" width="256"/>
