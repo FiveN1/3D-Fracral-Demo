@@ -24,3 +24,6 @@ make sure to update the dependencies path correctly in the premake5.lua file. al
 I recommend watching [Tim Milliards video](https://www.youtube.com/watch?v=DnbXLUDoS-4) about adding cimgui to your sokol project.
 this project uses 3912b3d pull of imgui.
 
+This is my first time using sokol in a project and I love it! Everything is super simple and easy to use!
+Exporting to web is strainght forward (once you get emscripten running). Also switching from C++ to pure C was great, got rid of a lot of decision fatigue!
+
